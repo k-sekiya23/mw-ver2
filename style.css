@@ -48,7 +48,7 @@
 
 .main-sub {
   max-width: 600px;
-  height: 130px;
+  height: 120px;
   margin: 16px auto;
   padding: 0 16px;
 }
@@ -64,7 +64,6 @@
   background-color: rgba(255,255,255, 0.4);
   text-align: center;
   align-items: center;
-  padding-bottom: 16px;
 }
 
 .main-copy {
@@ -101,6 +100,7 @@
   .contain {
     width: 100%;
     height: 240px;
+    padding-bottom: 16px;
   }
 
   .main-img {
