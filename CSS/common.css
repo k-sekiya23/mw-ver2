@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+/* ヘッダー、フッター、JSアニメーション共通CSS */
+
+body{
+  margin:0 auto;
+  background-color: #d5cdbd;
+}
+
+/* JSフェードインアニメーション */
+.fade-in {
+  opacity: 0;
+  transition-duration: 800ms;
+  transition-property: opacity, transform;
+}
+
+.fade-in2 {
+  opacity: 0;
+  transition-duration: 1000ms;
+  transition-property: opacity, transform;
+}
+
+.fade-in-up {
+  transform: translate(0, 50px);
+}
+
+.fade-in-down {
+  transform: translate(0, -50px);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/*jQeryフェードインアニメーションの指定*/
+.scrollanime {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+
+.fadeInDown0 {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.fadeInDown2 {
+  animation-name: fadeInDown;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  transform: translate(0);
+  }
+}
+
+/*上下の動きを指定*/
+.updown {
+transform: translateY(-60px);
+}
+
+.downup {
+transform: translateY(60px);
+}
+
+/* 共通ヘッダーCSS */
+
+.header-wrapper {
+  height: 110px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.header-main{
+  display: flex;
+  align-items: center;
+
+}
+
+.header-logo{
+  height: 110px;
+  width: 125px;
+}
+
+.header-logo img {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-title {
+  width: 280px;
+  text-align: center;
+}
+
+.header-title h1 {
+  font-size: 36px;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  text-align: center;
+}
+
+.gnavi__wrap {
+  width: 50%;
+  padding-right: 16px;
+  max-width: 560px;
+}
+.gnavi__lists {
+  display: flex;
+  justify-content: space-between;
+}
+.gnavi__list {
+  width: 25%;
+  /* max-width: 120px; */
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  transition: all .3s;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+.gnavi__list:hover {
+  background-color: #d5cdbd;
+}
+.gnavi__list:not(:first-child)::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #87BF8B;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .3s;
+}
+.gnavi__list:hover::before {
+  background-color: #d5cdbd;
+}
+.gnavi__list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  transition: all .3s;
+}
+.gnavi__list:hover a {
+  color: #fff;
+}
+
+/* ドロップダウンメニュー */
+.dropdown__lists {
+  display: none  !important;/*デフォルトでは非表示の状態にしておく*/
+  width: 30%;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.gnavi__list:hover .dropdown__lists {
+  display: block  !important;/*Gナビメニューにホバーしたら表示*/
+}
+.dropdown__list {
+  background-color: #d5cdbd;
+  height: 60px;
+  transition: all .3s;
+  position: relative;
+}
+.dropdown__list:not(:first-child)::before{
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d5cdbd;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.dropdown__list:hover {
+  background-color: #ecd5a7;
+}
+.dropdown__list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #87BF8B;
+  text-decoration: none;
+  position: relative;
+}
+.dropdown__list a::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #87BF8B;
+  border-left: 2px solid #87BF8B;
+  transform: rotate(135deg);
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 5px);
+}
+.dropdown__list:hover a{
+  color: #87BF8B;
+}
+
+.dropdown__lists {
+  visibility: hidden;/*デフォルトでは非表示の状態にしておく*/
+  opacity: 0;/*不透明度0*/
+  transition: all .3s;/*表示の変化を0.3秒に指定*/
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+.gnavi__list:hover .dropdown__lists {
+  visibility: visible;/*Gナビメニューにホバーしたら表示*/
+  opacity: 1;/*不透明度1*/
+}
+
+/* ページ遷移時の位置調整 */
+/* aboutとabout-subに付与 */
+.anchor::before {
+  content:'';
+  display: block;
+  padding-top: 110px;
+  margin-top: -110px;
+}
+
+/* SP版オーバーレイ */
+.sp-menu{
+  display: block;
+  padding: 20px;
+}
+
+.sp-menu #open {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+.sp-menu{
+  display: none;
+}
+
+main {
+  padding: 0 16px;
+}
+
+.overlay {
+  width: 40%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding:64px 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay.show {
+  opacity: 0.8;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li:hover {
+  color: #d5cdbd;
+}
+
+.overlay li {
+  margin-top: 32px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.overlay.show li:nth-child(4) {
+  transition-delay: .4s;
+}
+
+@media (max-width:768px){
+  .header-wrapper {
+    height: 60px;
+  }
+  
+  .header-logo{
+    height: 60px;
+    width: 60px;
+  }
+  
+  .header-logo img {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .header-title {
+    width: 80%;
+  }
+  
+  .header-title h1 {
+    font-size: 24px;
+  }
+
+}
+
+@media (max-width:817px){
+  .gnavi__wrap {
+    display: none;
+    }
+    
+    .sp-menu{
+      display: block;
+    }
+  
+    .sp-menu:hover{
+      color: #d5cdbd;
+    }
+
+    .overlay.show a {
+      font-size: 14px;
+    }
+}
+
+/* 共通フッター部分 */
+footer {
+  width: 100%;
+  height: 96px;
+  background-color: #87BF8B;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.index-footer {
+  position:relative;
+  top: 110px;
+}
+
+.footer-taitl{
+  color: white;
+  font-weight: bold;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  font-size: 18px;
+  padding-left: 18px;
+  width: 30%;
+}
+
+.source {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  text-wrap: wrap;
+  width: 40%;
+}
+
+.footer-item{
+  width: 30%;
+}
+
+.footer-item :hover{
+  color: #d5cdbd;
+}
+
+i{
+  float: right;
+  padding-right: 32px;
+  color: white;
+}
+
+.icon::before {
+  font-family: “Font Awesome 5 Free”;
+  font-weight: 900;
+  content: “\f000”;
+}
+
+@media (max-width:768px){
+  footer {
+    height: 60px;
+    width: 100%;
+  }
+
+  .index-footer {
+    position:relative;
+    top: 60px;
+  }
+
+  .footer-taitl{
+    padding-left: 16px;
+    font-size: 12px;
+  }
+
+  .source {
+    font-size: 8px; 
+    width: 50%;
+  }
+
+  .footer-item{
+    width: 20%;
+  }
+
+  i{
+    padding-right: 20px;
+  }
+
+}

@@ -1,18 +1,4 @@
 'use strict';
-
-{
-  const includeHeader = new XMLHttpRequest();
-  includeHeader.open("GET", "include/header.html", true);
-  includeHeader.onreadystatechange = function () {
-    if (includeHeader.readyState === 4 && includeHeader.status === 200) {
-      const headerHTML = includeHeader.responseText;
-      const header = document.querySelector("#header");
-      header.insertAdjacentHTML("afterbegin", headerHTML);
-    }
-  };
-  includeHeader.send();
-}
-
 // SP用メニューバー
 {
   const open = document.getElementById('open');
@@ -30,7 +16,7 @@
   });
 }
 
-// スクロール時のフェードイン
+// フェードイン
 {
   let fadeInTarget = document.querySelectorAll('.fade-in ,.fade-in2');
   window.addEventListener('scroll', () => {

@@ -6,14 +6,15 @@
   <title>みつばち助産院</title>
   <meta name="description" content="みつばち助産院は大阪府枚方市にある出張型助産院です。子育てを孤育てにしない、家族の『和』を大切にしたいそんな想いで皆さまと同じ目線で歩みたい" />
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="img/header-logo.png">
-
   <!-- reset.css destyle -->
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
   />
+  <link rel="stylesheet" href="CSS/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/header-logo.png">
+
   <script src="https://kit.fontawesome.com/470eab1a94.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -33,23 +34,95 @@
 </head>
 
 <body>
-  <header id="header"></header>
+  <!-- header共通部分呼び出し -->
+  <script src="js/header.js"></script>
 
+  <div class="wrap">
+    <section>
+      <div class="main">
+        <div class="main-imgs">
+          <div class="main-img fadeInDown2 downup">
+            <img src="img/main-img.jpg" alt="">
+          </div>
+          <div class="main-sub fadeInDown0 updown">
+            <img src="img/main.png" alt="">
+          </div>
+        </div>
+    
+        <div class="contain">
+          <div class="main-copy fadeInDown2 updown">
 
-  <footer class="index-footer">
-      <h1 class="footer-taitl ">みつばち助産院</h1>
-  
-      <p class="source">©mitsubachijosanin All Rights Reserved</p>
+            <div class="sp-copy">
+              <div class="copy-items">
+                <p>みつばち助産院は大阪府枚方市にある</p>
+              </div>
+            </div>
+            <div class="sp-copy">
+              <div class="copy-items">
+                <p><span>出張型助産院</span>です</p>
+              </div>
+            </div>
 
-      <div class="footer-item">
-        <a href="https://www.instagram.com/mitsubachi_mw?igshid=MmVlMjlkMTBhMg%3D%3D&utm_source=qr">
-          <i class="fa-brands fa-instagram fab fa-500px fa-10s fa-2x"></i>
-        </a>
+            <div class="pc-copy">
+              <div class="copy-items">
+                <p>みつばち助産院は大阪府枚方市にある<span>出張型助産院</span>です</p>
+              </div>
+            </div>
+            <div class="copy-items">
+              <p>子育てを<span>孤</span>育てにしない</p>
+            </div>
+            <div class="copy-items">
+              <p>家族の<span>『和』</span>を大切にしたい</p>
+            </div>
+            <div class="copy-items">
+              <p>そんな想いで皆さまと同じ目線で歩みたい</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-  </footer>
+    <!-- <section id="about" class="anchor">
+      <div class="about-chapter fade-in fade-in-down">
+        <h1>みつばち助産院でできること</h1>
+      </div>
+  
+      <div class="about">
+        <div class="about-coment fade-in2 fade-in-up">
+          <p>イノチとカラダの教室について</p><br>
+  
+          <p>「赤ちゃんってどこからきたん？」</p>
+          <p>「なんでママにはおちんちんないのー？」</p><br>
+  
+          <p>など性についてお子さんに聞かれて困ったことありませんか？</p><br>
+  
+  
+          <p>色んなことに興味津々の子どもたち。</p>
+          <p>気になった事をただ純粋に質問してるだけ。</p>
+          <p>でも聞かれた大人は、なんて答えたらいいのか戸惑いますよね。</p>
+          <p>性教育が大事なのは分かっていても、どう伝えたらいいのか、</p>
+          <p>何から始めたらいいのか分からないことだらけ。</p><br>
+          
+          <p>それは私たち大人が</p>
+          <p>きちんと性教育を学ぶことが出来なかった世代だからです。</p>
+          <p>ネット社会に生きる子どもたち。</p>
+          <p>簡単に沢山の事を知ることができます。ネットはとても便利です。</p>
+          <p>しかし誤った情報も多く、危険も沢山あり子どもの性被害が増えています。</p>
+          <p>自分のカラダを大切にする事は、自分のカラダやココロを守る事に</p>
+          <p>繋がります。自分の身は自分で守れるように。</p>
+          <p>カラダやイノチについて、お子さんと一緒に考えてみませんか？</p>
+          <p>お子さんに聞かれて返答に困った事や、伝えたい事など</p>
+          <p>お母さんや先生に代わって助産師がお伝えします</p>
+          <p>お話例:月経や精通など二次性徴や性器の洗い方など</p>
+        </div>
+       
+        <img src="img/about.jpg" alt="" class="about-img fade-in fade-in-down">
+      </div>
+    </section> -->
+  </div>
 
+  <!-- footer共通部分呼び出し -->
+  <script src="js/footer.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 </html>
