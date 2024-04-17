@@ -276,7 +276,7 @@ main {
   z-index: 10;
   background: rgba(255, 255, 255, 0.95);
   text-align: center;
-  padding:64px 48px;
+  padding:64px 32px;
   opacity: 0;
   pointer-events: none;
   transition: opacity .6s;
@@ -370,6 +370,10 @@ main {
   
     .sp-menu:hover{
       color: #d5cdbd;
+    }
+
+    .overlay.show a {
+      font-size: 14px;
     }
 }
 
