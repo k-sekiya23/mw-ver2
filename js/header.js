@@ -31,7 +31,7 @@
               <a href="cost.html">サービス</a>
               <ul class="dropdown__lists">
                 <li class="dropdown__list"><a href="cost.html">費用案内</a></li>
-                <li class="dropdown__list"><a href="cost.html#about-sub">相談</a></li>
+                <li class="dropdown__list"><a href="cost.html#about-sub">相談案内</a></li>
                 <li class="dropdown__list"><a href="cost.html#coment">感想</a></li>
               </ul>
             </li>

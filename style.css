@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .wrap {
-  width: 70%;
+  width: 80%;
   background-color: white;
   text-align: center;
   align-items: center;
@@ -12,6 +12,21 @@
   top: 110px;
 }
 
+/* index.html以外のラップ指定 */
+/* 要素上部のpadding不要の為 */
+.prof-wrap {
+  width: 80%;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  padding:0 0 16px 0;
+
+  position:relative;
+  top: 110px;
+}
+
+/* プロフィールなどの各見出し */
 .top-chapter {
   height: 64px;
   font-size: 28px;
@@ -21,13 +36,9 @@
   background-color: #87BF8B;
   text-align: center;
   padding: 16px 0;
+  border-radius: 15px;
 }
 
-@media (max-width:817px){
-  .wrap {
-    width: 90%;
-  }
-}
 @media (max-width:768px){
   .wrap {
     width: 100%;
@@ -35,6 +46,19 @@
     padding:16px 0;
     position: relative;
     top: 60px;
+  }
+
+  .prof-wrap {
+    width: 100%;
+    margin: 0 auto;
+    padding:16px 0;
+    position: relative;
+    top: 60px;
+  }
+
+  .top-chapter {
+    height: 56px;
+    font-size: 20px;
   }
 }
 
@@ -151,6 +175,7 @@
   background-color: #87BF8B;
   text-align: center;
   padding: 16px 0;
+  border-radius: 15px;
 }
 
 .about {
@@ -166,10 +191,15 @@
   color: #595959;
 }
 
+.about-coment p:last-child {
+  font-size: 14px;
+}
+
 .about-img {
   max-width: 662px;
   height:400px;
   margin-top: 16px;
+  border-radius: 10px;
 }
 
 .about-img img {
@@ -188,11 +218,21 @@
 
 @media (max-width:768px){
 
-  .about-chapter {
-    margin-top: 0;
-    font-size: 24px;
+  .about {
+    font-size: 14px;
+  }
+  
+  .about-coment p {
+    line-height: 1.7;
+
   }
 
+  .about-coment p:last-child {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:500px){
   .about {
     font-size: 10px;
   }
@@ -207,7 +247,461 @@
   }
 
   .about-img {
-    width: 350px;
+    width: 340px;
     height: 200px;
+  }
+}
+
+/* プロフィール部分のCSS */
+/* prof  */
+.prof-img {
+  width: 600px;
+  height: 450px;
+  margin:0 auto;
+  padding: 16px 0 0 0;
+}
+
+.prof-img img {
+  max-width: 100%;
+}
+
+.prof-name {
+  margin: 16px 0;
+}
+
+.prof-name h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #595959;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  padding-bottom: 16px;
+}
+
+.prof-name h2 {
+  font-size: 32px;  
+  color: #595959;
+  font-family:"Courier";
+  font-weight: bold;
+}
+
+.prof-coment {
+  font-size: 18px;
+  color: #595959;
+  text-align: center;
+  white-space: nowrap;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  margin: 16px 0;
+}
+
+.prof-coment p {
+  line-height: 1.7;
+}
+
+.prof-coment span {
+  font-weight: bold;
+  color: #87BF8B;
+}
+
+.license-img {
+  width: 662px;
+  height:450px ;
+  margin: 16px 0 0;
+  border-radius: 10px;
+}
+
+.license-img img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width:960px){
+  .license-img {
+    width: 500px;
+    height: 360px;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width:900px){
+  .prof-img {
+    width: 450px;
+    height: 360px;
+  }
+}
+
+@media (max-width:768px){
+  .prof-img {
+    width: 340px;
+    height: 260px;
+  }
+
+  .prof-name h1 {
+    font-size: 24px;
+    padding-bottom: 16px;
+  }
+  
+  .prof-name h2 {
+    font-size: 20px;
+  }
+
+  .prof-coment {
+    font-size: 14px;
+  }
+
+  .prof-coment p {
+    line-height: 1.3;
+  }
+
+  .prof-footer {
+    margin-top: 100px;
+    height: 80px;
+  }
+}
+
+@media (max-width:500px){
+  .license-img {
+    width: 340px;
+    height: 240px;
+    margin: 16px 0 0;
+  }
+}
+
+/* cost部分のCSS */
+.cost {
+  margin: 0 auto;
+  padding: 16px 18px 0;
+  max-width: 662px;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+.cost-table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cost-table tr {
+  border-bottom: 1px solid #87BF8B;
+  text-align: left;
+}
+
+.cost-table th{
+  padding: 16px 0;
+  width: 75%;
+  font-size: 18px;
+  color: #87BF8B;
+}
+
+.cost-table th span{
+  font-size: 18px;
+  color: #E7D848;
+}
+
+.cost-table th p{
+  margin-left: 18px;
+  font-size: 14px;
+  color: #595959;
+  line-height: 1.5;
+}
+
+.cost-table td{
+  padding: 18px 0;
+  width: 25%;
+  font-size: 18px;
+  color: #595959;
+}
+
+.sp-table{
+  display: none;
+}
+
+.cost-caution {
+  margin: 0 auto;
+  padding-top: 18px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.3;
+  color: #595959;
+}
+
+.cost-caution span {
+  font-size: 14px;
+  color: #87BF8B;
+}
+
+@media (max-width:768px){
+  .cost {
+    width: 100%;
+  }
+
+  .cost-table th{
+    font-size: 16px;
+  }
+  
+  .cost-table th span{
+    font-size: 16px;
+  }
+  
+  .cost-table th p{
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .cost-table td{
+    font-size: 16px;
+  }
+
+  .sp-table {
+    display: block;
+  }
+
+  .pc-table {
+    display: none;
+  }
+
+  .cost-caution {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+}
+
+/* 母乳相談、育児相談・沐浴指導、赤ちゃんを迎える話 */
+.about-subtitol {
+  margin: 32px auto 0;
+  max-width: 662px;
+  text-align: left;
+}
+
+.about-sub-item {
+  margin-bottom: 32px;
+}
+
+.about-sub-item:last-child {
+  margin: 0;
+}
+
+.about-subtitol-img {
+  height: 64px;
+  margin-bottom:16px;
+}
+
+.about-subimg {
+  width: 80%;
+  height: 360px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.about-subimg img{
+  width: 100%;
+  height: 100%;
+}
+
+.about-subimg2 {
+  width: 300px;
+  height: 400px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.about-subimg2 img{
+  height: 100%;
+}
+
+
+.about-subtitol-coment {
+  padding: 16px 16px 0;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: left;
+  color: #595959;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+.about-subtitol-coment span{
+  font-size: 20px;
+  color: #87BF8B;
+}
+
+@media (max-width:768px){
+  .about-subtitol {
+    margin: 0 auto;
+    padding-top: 16px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .about-sub-item {
+    margin-bottom: 16px;
+  }
+
+  .about-subtitol-img {
+    height: 48px;
+    margin: 0;
+  }
+
+  .about-subtitol-coment {
+    font-size: 14px;
+  }
+  
+  .about-subtitol-coment span{
+    font-size: 16px;
+    color: #87BF8B;
+  }
+
+  .about-subimg {
+    width: 300px;
+    height: 220px;
+  }
+
+  .about-subimg2 {
+    width: 200px;
+    height: 260px;
+  }
+}
+
+@media (max-width:500px){
+  .about-subtitol-coment {
+    font-size: 11px;
+  }
+  
+  .about-subtitol-coment span{
+    font-size: 12px;
+    color: #87BF8B;
+  }
+}
+
+.sp-about-items {
+  display: none;
+}
+
+.about2-img {
+  width: 662px;
+  height:500px;
+  margin-top: 0 auto;
+}
+
+.about-items {
+  max-width: 662px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.about-item {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.item-coment {
+  width: 35%;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: left;
+  padding:0 16px;
+  color: #595959;
+}
+
+.item-coment2 {
+  width: 60%;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: left;
+  color: #595959;
+  padding-top: 16px;
+}
+
+.item-img {
+  width: 65%;
+  height: 250px;
+  padding: 0 16px;
+}
+
+.item-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.item-img2 {
+  width: 40%;
+  height: 300px;
+  padding: 16px 0 0 16px;
+}
+
+.item-img2 img {
+  height: 100%;
+}
+
+.about-item:nth-child(2n+1) { flex-direction: row; }         
+
+.about-item:nth-child(2n  ) { flex-direction: row-reverse; } 
+
+@media (max-width:960px){
+  .about2-img {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+@media (max-width:768px){
+  .about-items {
+    display: none;
+  }
+  
+  .sp-about-items {
+    width: 100%;
+    display: block;
+  }
+
+  .about-item {
+    display: block;
+  }
+
+  .item-img {
+    width: 320px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0 0 16px 0;
+  }
+  
+  .item-img2 {
+    width: 170px;
+    height: 260px;
+    margin: 0 auto;
+    padding: 16px 0;
+  }
+  
+  .item-img2 img {
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .item-coment {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+    padding:0 16px;
+    color: #595959;
+  }
+  
+  .item-coment2 {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+    padding:0 16px;
+    color: #595959;
+  }
+  
+  .about-item:nth-child(2n+1) { flex-direction: row; }         
+  
+  .about-item:nth-child(2n  ) { flex-direction: row-reverse; } 
+
+}
+
+@media (max-width:500px){
+  .about2-img {
+    width: 340px;
+    height: 260px;
   }
 }
