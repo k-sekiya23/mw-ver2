@@ -705,3 +705,36 @@
     height: 260px;
   }
 }
+
+/* お問い合わせ */
+.prof-wrap h2 {
+  font-size: 24px;
+  color: #595959;
+  font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  padding: 16px 0;
+}
+
+.prof-wrap h2 a:hover{
+  border-bottom: solid 1px #87BF8B;
+  color: #87BF8B;
+}
+
+.contact-coution {
+  max-width: 560px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.3;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media (max-width:768px){
+  .prof-wrap h2 {
+    font-size: 20px;
+  }
+
+  .prof-wrap h2 a{
+    border-bottom: solid 1px #87BF8B;
+    color: #87BF8B;
+  }
+}
